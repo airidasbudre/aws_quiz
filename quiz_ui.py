@@ -9,8 +9,8 @@ class QuizInterface:
     def __init__(self, quiz_brain: QuizBrain) -> None:
         self.quiz = quiz_brain
         self.window = Tk()
-        self.window.title("Aws quiz App")
-        self.window.geometry("850x530")
+        self.window.title("AWS quiz App")
+        self.window.geometry("1200x630")
 
         # Display Title
         self.display_title()
@@ -63,7 +63,7 @@ class QuizInterface:
         choice_list = []
 
         # position of the first option
-        y_pos = 220
+        y_pos = 320
 
         # adding the options to the list
         while len(choice_list) < 4:
@@ -130,7 +130,7 @@ class QuizInterface:
                              width=10, bg="green", fg="white", font=("ariel", 16, "bold"))
 
         # palcing the button  on the screen
-        next_button.place(x=350, y=460)
+        next_button.place(x=250, y=560)
 
         # This is the second button which is used to Quit the self.window
         quit_button = Button(self.window, text="Quit", command=self.window.destroy,
