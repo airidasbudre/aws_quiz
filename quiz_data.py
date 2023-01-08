@@ -5,36 +5,271 @@ parameters = {
     "type": "multiple"
 }
 
-response = requests.get(url="https://opentdb.com/api.php", params=parameters)
-# question_data = response.json()["results"]
 
 
-question_data = {
-"response_code": 0,
-"results": [
+question_data = [
   {
-      'category': 'Sports', 
+      'category': 'AWS', 
       'type': 'multiple', 
       'difficulty': 'medium', 
-      'question': 'Which Formula One driver was nicknamed &#039;The Professor&#039;?',
-      'correct_answer': 'Alain Prost', 
+      'question': 'According to AWS, what is the benefit of Elasticity?',
+      'correct_answer': 'Create systems that scale to the required capacity based on changes in demand', 
       'incorrect_answers': [
-          'Ayrton Senna', 
-          'Niki Lauda', 
-          'Emerson Fittipaldi'
+          'Minimize storage requirements by reducing logging and auditing activities', 
+          'Enable AWS to automatically select the most cost-effective services.', 
+          'Accelerate the design process because recovery from failure is automated, reducing the need for testing'
           ]
   }, 
   {
-      'category': 'Entertainment: Music', 
+      'category': 'AWS', 
       'type': 'multiple', 
       'difficulty': 'medium', 
-      'question': 'In which city did American rap producer DJ Khaled originate from?',
-      'correct_answer': 'Miami', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
       'incorrect_answers': [
-          'New York', 
-          'Detroit', 
-          'Atlanta'
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
           ]
-      }
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'A business analyst would like to move away from creating complex\n database queries and static spreadsheets when generating regular reports for high-level management. They would like to publish insightful, graphically appealing reports with interactive dashboards. Which service can they use to accomplish this?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
+    {
+      'category': 'AWS', 
+      'type': 'multiple', 
+      'difficulty': 'medium', 
+      'question': 'Which tool can you use to forecast your AWS spending?',
+      'correct_answer': 'AWS Cost Explorer', 
+      'incorrect_answers': [
+          'AWS Organizations', 
+          'Amazon Dev Pay', 
+          'AWS Trusted Advisor'
+          ]
+      },
 ]
-}
