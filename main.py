@@ -2,17 +2,17 @@ from question_model import Question
 from quiz_data import question_data
 from quiz_brain import QuizBrain
 from quiz_ui import QuizInterface
-from random import shuffle
-import html
+from random import randint, shuffle
+import requests
 
 question_bank = []
 for question in question_data:
     choices = []
-    question_text = html.unescape(question["question"])
-    correct_answer = html.unescape(question["correct_answer"])
-    incorrect_answers = question["incorrect_answers"]
+    question_text = question.get("question")
+    correct_answer = question.get("correct_answer")
+    incorrect_answers = question.get("incorrect_answers")
     for ans in incorrect_answers:
-        choices.append(html.unescape(ans))
+        choices.append(ans)
     choices.append(correct_answer)
     shuffle(choices)
     new_question = Question(question_text, correct_answer, choices)
