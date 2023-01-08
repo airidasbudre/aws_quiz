@@ -1,6 +1,8 @@
-from tkinter import *
+from tkinter import Tk, Canvas, StringVar, Label, Radiobutton, Button, messagebox
+from tkinter import messagebox
 from quiz_brain import QuizBrain
 
+THEME_COLOR = "#375362"
 
 class QuizInterface:
 
@@ -80,5 +82,74 @@ class QuizInterface:
 
         # return the radio buttons
         return choice_list
+
+    def display_options(self):
+        """To display four options"""
+
+        val = 0
+
+        # deselecting the options
+        self.user_answer.set(None)
+
+        # looping over the options to be displayed for the
+        # text of the radio buttons.
+        for option in self.quiz.current_question.choices:
+            self.opts[val]['text'] = option
+            self.opts[val]['value'] = option
+            val += 1
+
+    def next_btn(self):
+        """To show feedback for each answer and keep checking for more questions"""
+
+        # Check if the answer is correct
+        if self.quiz.check_answer(self.user_answer.get()):
+            self.feedback["fg"] = "green"
+            self.feedback["text"] = 'Correct answer! \U0001F44D'
+        else:
+            self.feedback['fg'] = 'red'
+            self.feedback['text'] = ('\u274E Oops! \n'
+                                        f'The right answer is: {self.quiz.current_question.correct_answer}')
+
+        if self.quiz.has_more_questions():
+            # Moves to next to display next question and its options
+            self.display_question()
+            self.display_options()
+        else:
+            # if no more questions, then it displays the score
+            self.display_result()
+
+            # destroys the self.window
+            self.window.destroy()
+
+    def buttons(self):
+        """To show next button and quit button"""
+
+        # The first button is the Next button to move to the
+        # next Question
+        next_button = Button(self.window, text="Next", command=self.next_btn,
+                             width=10, bg="green", fg="white", font=("ariel", 16, "bold"))
+
+        # palcing the button  on the screen
+        next_button.place(x=350, y=460)
+
+        # This is the second button which is used to Quit the self.window
+        quit_button = Button(self.window, text="Quit", command=self.window.destroy,
+                             width=5, bg="red", fg="white", font=("ariel", 16, " bold"))
+
+        # placing the Quit button on the screen
+        quit_button.place(x=700, y=50)
+
+    def display_result(self):
+        """To display the result using messagebox"""
+        correct, wrong, score_percent = self.quiz.get_score()
+
+        correct = f"Correct: {correct}"
+        wrong = f"Wrong: {wrong}"
+
+        # calculates the percentage of correct answers
+        result = f"Score: {score_percent}%"
+
+        # Shows a message box to display the result
+        messagebox.showinfo("Result", f"{result}\n{correct}\n{wrong}")
 
     
