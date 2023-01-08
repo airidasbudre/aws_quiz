@@ -1,31 +1,40 @@
 import requests
 
 parameters = {
-    "amount": 20,
+    "amount": 2,
     "type": "multiple"
 }
 
 response = requests.get(url="https://opentdb.com/api.php", params=parameters)
 question_data = response.json()["results"]
 
-question_data = {
-  "response_code": 0,
-  "results": [
+
+"""
+Sample Response
+[
     {
-      "category": "AWS Cloud Practitioner",
-      "type": "multiple",
-      "difficulty": "hard",
-      "question": "What was the name of the hero in the 80s animated video game &#039;Dragon&#039;s Lair&#039;?",
-      "correct_answer": "Dirk the Daring",
-      "incorrect_answers": ["Arthur", "Sir Toby Belch", "Guy of Gisbourne"]
-    },
+        'category': 'Sports', 
+        'type': 'multiple', 
+        'difficulty': 'medium', 
+        'question': 'Which Formula One driver was nicknamed &#039;The Professor&#039;?',
+        'correct_answer': 'Alain Prost', 
+        'incorrect_answers': [
+            'Ayrton Senna', 
+            'Niki Lauda', 
+            'Emerson Fittipaldi'
+            ]
+    }, 
     {
-      "category": "AWS Cloud Practitioner",
-      "type": "multiple",
-      "difficulty": "medium",
-      "question": "Which of these game franchises were made by Namco?",
-      "correct_answer": "Tekken",
-      "incorrect_answers": ["Street Fighter", "Mortal Kombat", "Dragon Quest"]
-    }
-  ]
-}
+        'category': 'Entertainment: Music', 
+        'type': 'multiple', 
+        'difficulty': 'medium', 
+        'question': 'In which city did American rap producer DJ Khaled originate from?',
+        'correct_answer': 'Miami', 
+        'incorrect_answers': [
+            'New York', 
+            'Detroit', 
+            'Atlanta'
+            ]
+        }
+]
+"""
