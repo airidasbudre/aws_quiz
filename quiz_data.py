@@ -36,12 +36,12 @@ question_data = [
       'category': 'AWS', 
       'type': 'multiple', 
       'difficulty': 'medium', 
-      'question': 'Which tool can you use to forecast your AWS spending?',
-      'correct_answer': 'AWS Cost Explorer', 
+      'question': 'What is the AWS feature that enables fast, easy and secure transfers\n of files over long distances between your client and your Amazon S3 bucket?',
+      'correct_answer': 'Amazon S3 Transfer Acceleration', 
       'incorrect_answers': [
-          'AWS Organizations', 
-          'Amazon Dev Pay', 
-          'AWS Trusted Advisor'
+          'File Transfer', 
+          'HTTP Transfer', 
+          'S3 Acceleration'
           ]
       },
     {
