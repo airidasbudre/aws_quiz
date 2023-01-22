@@ -17,7 +17,7 @@ class QuizInterface:
 
         # Creating a canvas for question text, and dsiplay question
         self.canvas = Canvas(width=800, height=250)
-        self.question_text = self.canvas.create_text(400, 125,
+        self.question_text = self.canvas.create_text(350, 70,
                                                      text="Question here",
                                                      width=680,
                                                      fill=THEME_COLOR,
@@ -48,8 +48,8 @@ class QuizInterface:
         """To display title"""
 
         title = Label(self.window, text="iQuiz Application",
-                        width=50, bg="green", fg="white", font=("ariel", 20, "bold"))
-        title.place(x=0, y=2)
+                        width=100, bg="green", fg="white", font=("ariel", 20, "bold"))
+        title.place(x=0, y=6)
 
     def display_question(self):
         """To display the question"""
@@ -63,7 +63,7 @@ class QuizInterface:
         choice_list = []
 
         # position of the first option
-        y_pos = 320
+        y_pos = 250
 
         # adding the options to the list
         while len(choice_list) < 4:
@@ -75,10 +75,10 @@ class QuizInterface:
             choice_list.append(radio_btn)
 
             # placing the button
-            radio_btn.place(x=200, y=y_pos)
+            radio_btn.place(x=100, y=y_pos)
 
             # incrementing the y-axis position by 40
-            y_pos += 40
+            y_pos += 55
 
         # return the radio buttons
         return choice_list
@@ -137,7 +137,7 @@ class QuizInterface:
                              width=5, bg="red", fg="white", font=("ariel", 16, " bold"))
 
         # placing the Quit button on the screen
-        quit_button.place(x=700, y=50)
+        quit_button.place(x=900, y=50)
 
     def display_result(self):
         """To display the result using messagebox"""
