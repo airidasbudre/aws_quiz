@@ -1,5 +1,7 @@
-from tkinter import Tk, Canvas, StringVar, Label, Radiobutton, Button, messagebox
+from logging import root
+from tkinter import Tk, Canvas, StringVar, Label, Radiobutton, Button, TkVersion, messagebox
 from tkinter import messagebox
+import tkinter
 from quiz_brain import QuizBrain
 
 THEME_COLOR = "#375362"
@@ -121,6 +123,12 @@ class QuizInterface:
             # destroys the self.window
             self.window.destroy()
 
+    def answer_description_button(self):
+        new_window = tkinter.Toplevel(root)
+        new_window.title("Pop-up Window")
+        label = TkVersion.Label(new_window, text="This is a pop-up window.")
+        label.pack()
+
     def buttons(self):
         """To show next button and quit button"""
 
@@ -139,6 +147,12 @@ class QuizInterface:
         # placing the Quit button on the screen
         quit_button.place(x=900, y=50)
 
+        # information button
+        answer_description_button = Button(self.window, text="information", command=self.next_btn,
+                             width=10, bg="green", fg="white", font=("ariel", 16, "bold"))
+
+        answer_description_button.place(x=900, y=100)
+
     def display_result(self):
         """To display the result using messagebox"""
         correct, wrong, score_percent = self.quiz.get_score()
@@ -151,5 +165,7 @@ class QuizInterface:
 
         # Shows a message box to display the result
         messagebox.showinfo("Result", f"{result}\n{correct}\n{wrong}")
+
+    
 
     
